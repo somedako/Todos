@@ -1,0 +1,116 @@
+:root {
+  --text-black: #161616;
+  --gray: #d9d9d9;
+  --gray-text: #a6a6a6;
+  --shadow: 2px 2px 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Montseratt", sans-serif;
+  font-size: 1rem;
+  color: var(--text-black);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 1.5em auto;
+}
+
+.profile {
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  padding: 2.33em 1.33em;
+}
+
+.profile-header {
+  padding-bottom: 1.33em;
+  border-bottom: 1px solid var(--gray);
+}
+
+.profile-header__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.profile-body {
+  margin-top: 2em;
+  display: grid;
+  gap: 24px;
+}
+
+.profile-body__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-body__text {
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.profile-body__text.gray {
+  color: var(--gray-text);
+}
+
+.profile-body__text.black {
+  color: var(--text-black);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .profile {
+    gap: 16px;
+    box-shadow: none;
+    padding: 0;
+    height: max-content;
+  }
+
+  .profile-header__title {
+    font-size: 1rem;
+  }
+
+  .profile-body {
+    margin-top: 1rem;
+  }
+
+  .profile-body__avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-body__text-gray,
+  .profile-body__text-black {
+    font-size: 0.75rem;
+  }
+}
